@@ -1,0 +1,31 @@
+.container {
+  padding: 20px;
+  background-color: var(--background);
+}
+.booksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.imagePlaceholder {
+  width: 100px;
+  height: 150px;
+  background-color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background);
+  font-size: 0.8em;
+  margin-bottom: 12px;
+}
+.description {
+  margin-top: 20px;
+  line-height: 1.6;
+  color: var(--textColor);
+}

@@ -1,0 +1,31 @@
+
+
+.bookCardContainer {
+  border: 1px solid var(--foreground);
+  padding: 16px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--background);
+
+}
+.bookCardContainer:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+    transition: all 0.3s ease;
+}
+.bookAvatar {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+.title {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+.author {
+  font-size: 1.2em;
+color: var(--textClor);
+}

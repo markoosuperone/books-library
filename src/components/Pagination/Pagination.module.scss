@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.link {
+  padding: 8px 16px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  color: var(--primary);
+}
+
+.link:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+.disabled {
+  padding: 8px 16px;
+  border: 1px solid var(--textClor);
+  border-radius: 4px;
+  color: var(--textClor);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.status {
+  color: var(--textClor);
+}
