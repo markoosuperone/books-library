@@ -1,7 +1,8 @@
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import { GRAPHQL_ENDPOINT } from "./constants";
 
 const httpLink = new HttpLink({
-  uri: "http://localhost:3000/api/graphql",
+  uri: GRAPHQL_ENDPOINT,
   credentials: "same-origin",
 });
 export const client = new ApolloClient({

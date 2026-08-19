@@ -1,4 +1,3 @@
-
 const typeDefs = `#graphql
 
 type ImageLinks {
@@ -42,12 +41,17 @@ input GoogleBooksResponseInput {
 }
 
 type Query {
-  books: [GoogleBooksResponse]
+  favoriteBooks: [GoogleBooksResponse]
+  favoriteBook(id: ID!): GoogleBooksResponse
 }
 
   type Mutation {
-    createBooks(input: [GoogleBooksResponseInput]): [GoogleBooksResponse]
+    addFavoriteBook(input: GoogleBooksResponseInput): GoogleBooksResponse
+    updateFavoriteBook(id: ID!, input: GoogleBooksResponseInput): GoogleBooksResponse
+    removeFavoriteBook(id: ID!): GoogleBooksResponse
   }
+
+
 `;
 
 export default typeDefs;

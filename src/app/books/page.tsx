@@ -41,15 +41,10 @@ const BooksPage = async ({
           </div>
         )}
         {volumes.map((book) => {
-          const { title, authors } = book.volumeInfo;
-          const imageUrl = book.volumeInfo.imageLinks?.thumbnail;
           return (
             <Link href={`/books/${book.id}`} key={book.id}>
               <BookCard
-                imageUrl={imageUrl}
-                key={book.id}
-                title={title}
-                author={authors ? authors[0] : "no name"}
+                book={book}
               />
             </Link>
           );

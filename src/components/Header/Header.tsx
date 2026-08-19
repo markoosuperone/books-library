@@ -1,5 +1,6 @@
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import styles from './Header.module.scss';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -10,9 +11,9 @@ const Header = () => {
         <ThemeToggle />
       </div>
       <div className={styles.navLinks}>
-        <a href="/">Home</a>
-        <a href="/books">Books</a>
-        <a href="/favorites">Favorites</a>
+        <Link href="/">Home</Link>
+        <Link href="/books">Books</Link>
+        <Link href="/favorites">Favorites</Link>
       </div>
     </header>
   );

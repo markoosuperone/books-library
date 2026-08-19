@@ -1,25 +1,14 @@
 import { startServerAndCreateNextHandler } from "@as-integrations/next";
 import { ApolloServer } from "@apollo/server";
 import { NextRequest } from "next/server";
-import  resolvers  from "./resolvers";
-import  typeDefs  from "./shema";
-import { MongoClient, ServerApiVersion } from "mongodb";
-import { clientPromise } from "@/lib/mongodb";
+import resolvers from "./resolvers";
+import typeDefs from "./shema";
+import { isMongoReachable } from "@/lib/mongodb";
 
-
-
-
-
-async function run() {
-  try {
-    const client = await clientPromise;
-    await client.db("books").command({ ping: 1 });
-  } finally {
-    const client = await clientPromise;
-    await client.close();
-  }
-}
-run()
+// Startup probe, for visibility only. It deliberately does not close the shared
+// client and does not block the route from being served: an unreachable
+// database should fail the mutations that need it, not the whole endpoint.
+void isMongoReachable();
 
 const server = new ApolloServer({
   resolvers,
@@ -32,7 +21,6 @@ const handler = startServerAndCreateNextHandler<NextRequest>(server, {
     res,
   }),
 });
-
 
 export async function POST(request: NextRequest) {
   return handler(request);

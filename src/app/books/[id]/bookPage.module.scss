@@ -16,6 +16,7 @@
 .imagePlaceholder {
   width: 100px;
   height: 150px;
+  object-fit: cover;
   background-color: var(--foreground);
   display: flex;
   align-items: center;

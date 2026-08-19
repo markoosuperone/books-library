@@ -1,0 +1,32 @@
+.container {
+  padding: 20px;
+  background-color: var(--background);
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.cover {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  margin: 12px 0;
+}
+
+.description {
+  margin-top: 20px;
+  line-height: 1.6;
+  color: var(--textClor);
+}

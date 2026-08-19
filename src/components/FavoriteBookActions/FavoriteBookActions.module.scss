@@ -1,0 +1,79 @@
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+  max-width: 640px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.9em;
+  color: var(--textClor);
+}
+
+.input,
+.textarea {
+  padding: 8px 12px;
+  border: 1px solid var(--foreground);
+  border-radius: 4px;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: 1em;
+}
+
+.textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.save,
+.remove {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  background-color: var(--background);
+}
+
+.save {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.save:hover:enabled {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+.remove {
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.remove:hover:enabled {
+  background-color: var(--error);
+  color: var(--background);
+}
+
+.save:disabled,
+.remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.message {
+  color: var(--textClor);
+}
